@@ -1,0 +1,94 @@
+
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+Smart Voting System Home Page
+{% endblock %}
+{% block style %}
+body{
+	background-image: url('{% static "images/Background2.JPG"%}');
+      	background-repeat: no-repeat;
+      	background-attachment: fixed;
+      	background-position:0% 60%;
+      	background-size: 1550px;
+}
+#box {
+  width: 400px;
+  border: 5px solid;
+  padding: 5px;
+  margin:5px;
+}
+#boxText{
+ color:white;
+}
+{% endblock %}
+{% block content %}
+<center>
+<div id ="box" class="blue darken-1">
+<h3 id="boxText" style="font-family:arial;"> Every Vote Counts </h3>
+</div>
+</center>
+<div class="container">
+  <div class="card-group">
+    <div class="row ">
+        <div class="col-sm-6">
+          <div class="card  bg-primary mb-3" style="max-width: 35rem;">
+            <div class="card" style="width: 25rem;">
+	 <img  id="cardimg1" class="card-img-top" src="{% static "images/hand2.PNG"%}">
+              <div class="card-img-overlay">
+                <h5 class="card-title" style="color:black;">Admin</h5>
+                <p class="card-text" style="color:black;">Click here to go to admin section</p>
+                <a href="{% url 'adminSect' %}" class="btn btn-primary">Next</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="card bg-primary mb-3" style="max-width: 35rem;">
+            <div class="card" style="width: 25rem;">
+	 <img  id="cardimg1" class="card-img-top" src="{% static "images/hand2.PNG"%}">
+              <div class="card-img-overlay">
+                <h5 class="card-title" style="color:black;">User</h5>
+                <p class="card-text" style="color:black;">Click here to go to user website </p>
+                <a href="{% url 'userSect' %}" class="btn btn-primary">Next</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+  </div>
+</div>
+</div>
+
+<footer class="page-footer blue darken-1">
+  <div class="container" id="foot1">
+    <div class="row">
+      <div class="col l6 s18">
+        <h5 class="white-text">Contact us</h5>
+        <h6>2018.baldev.sundarani@ves.ac.in</h6>
+        <h6>2018.simran.gurnani@ves.ac.in</h6>
+        <h6>2018.abhishek.waghmare@ves.ac.in</h6>
+        <h6>2018.hitesh.santani@ves.ac.in</h6>
+
+      </div>
+      <div class="col l4 offset-l2 s12">
+        <h5 class="white-text">Quick Links</h5>
+        <ul>
+          <li><a class="grey-text text-lighten-3" href="#">About us</a></li>
+          <li><a class="grey-text text-lighten-3" href="#">Contact us </a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer-copyright">
+    <div class="container">
+
+      <a class="grey-text text-lighten-4 right" href="#!"></a>
+    </div>
+  </div>
+</footer>
+
+<script type="text/javascript" src={% static "js/materialize.min.js"%}></script>
+{% endblock %}
